@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 255 154 158;
+    --color-secondary: 168 230 207;
+    --color-accent: 250 208 196;
+    --color-dark: 45 52 54;
+    --color-light: 255 253 249;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#FFFDF9] text-[#2D3436] antialiased overflow-x-hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: rgb(255, 154, 158);
+  }
+  .bg-primary {
+    background-color: rgb(255, 154, 158);
+  }
+  .text-secondary {
+    color: rgb(168, 230, 207);
+  }
+  .bg-secondary {
+    background-color: rgb(168, 230, 207);
+  }
+  .text-accent {
+    color: rgb(250, 208, 196);
+  }
+  .bg-accent {
+    background-color: rgb(250, 208, 196);
+  }
+  .glass {
+    @apply bg-white/40 backdrop-blur-md border border-white/30 shadow-lg;
+  }
+  .glass-dark {
+    @apply bg-black/30 backdrop-blur-md border border-white/10 shadow-lg text-white;
+  }
+}
