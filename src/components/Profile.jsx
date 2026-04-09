@@ -44,9 +44,9 @@ const Profile = () => {
               {/* Decorative ring around photo */}
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
               <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-primary p-1 shadow-2xl relative z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop" 
-                  alt="Romeo" 
+                 <img 
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1288&auto=format&fit=crop" 
+                  alt="Dwi" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
@@ -63,9 +63,9 @@ const Profile = () => {
                 </svg>
               </div>
             </div>
-            <h3 className="text-3xl font-calligraphy text-primary mb-2">Romeo Montague</h3>
-            <p className="text-dark/70 mb-1 font-sans text-sm">Putra pertama dari</p>
-            <p className="font-semibold text-dark font-sans text-sm">Bpk. Lord Montague & Ibu Lady Montague</p>
+            <h3 className="text-3xl font-calligraphy text-primary mb-2">Dwi</h3>
+            <p className="text-dark/70 mb-1 font-sans text-sm">Anak Kedua dari</p>
+            <p className="font-semibold text-dark font-sans text-sm">Bpk. Lord  & Ibu Lady </p>
           </motion.div>
 
           {/* Ring / Love connector */}
@@ -91,9 +91,9 @@ const Profile = () => {
             <div className="relative mb-6">
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow" style={{ animationDirection: 'reverse' }} />
               <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-primary p-1 shadow-2xl relative z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1288&auto=format&fit=crop" 
-                  alt="Juliet" 
+                  <img 
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop" 
+                  alt="Turkis" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
@@ -110,9 +110,9 @@ const Profile = () => {
                 </svg>
               </div>
             </div>
-            <h3 className="text-3xl font-calligraphy text-primary mb-2">Juliet Capulet</h3>
-            <p className="text-dark/70 mb-1 font-sans text-sm">Putri kedua dari</p>
-            <p className="font-semibold text-dark font-sans text-sm">Bpk. Lord Capulet & Ibu Lady Capulet</p>
+            <h3 className="text-3xl font-calligraphy text-primary mb-2">Turkis </h3>
+            <p className="text-dark/70 mb-1 font-sans text-sm">Anak keenam dari</p>
+            <p className="font-semibold text-dark font-sans text-sm">Bpk. Lord  & Ibu Lady </p>
           </motion.div>
 
         </div>

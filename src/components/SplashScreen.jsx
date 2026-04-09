@@ -106,7 +106,7 @@ const SplashScreen = ({ onOpen }) => {
           transition={{ delay: 1, duration: 1 }}
           className="text-5xl md:text-7xl font-calligraphy text-primary mb-4 drop-shadow-sm"
         >
-          Romeo & Juliet
+          Dwi & Turkis
         </motion.h1>
 
         <motion.div

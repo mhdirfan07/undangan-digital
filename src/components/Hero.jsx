@@ -53,7 +53,7 @@ const Hero = () => {
           viewport={{ once: true }}
           className="text-6xl md:text-8xl font-calligraphy text-white mb-4 drop-shadow-lg"
         >
-          Romeo & Juliet
+          Dwi & Turkis
         </motion.h1>
 
         {/* Floral divider below name */}
