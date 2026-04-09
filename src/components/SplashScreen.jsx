@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FloralCorner, FloralDivider, WatercolorBlob } from './FloralDecorations';
 
-const SplashScreen = ({ onOpen }) => {
-  // Phases: 'initial' → 'flashing' → 'doors-opening' → done (unmount)
+// Fungsi bantuan untuk memberi jeda waktu agar logika animasi lebih rapi
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const SplashScreen = ({ onOpen, guestName = 'Tamu Kehormatan' }) => {
+  // Phases: 'initial' → 'flashing' → 'doors-opening'
   const [phase, setPhase] = useState('initial');
   const [photoIndex, setPhotoIndex] = useState(0);
 
@@ -13,25 +16,21 @@ const SplashScreen = ({ onOpen }) => {
     "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"
   ];
 
-  const handleBuka = () => {
+  const handleBuka = async () => {
     setPhase('flashing');
-    
-    let count = 0;
-    const interval = setInterval(() => {
-      count++;
-      if (count >= photos.length) {
-        clearInterval(interval);
-        // Smoothly transition: last photo fades → doors open
-        setTimeout(() => {
-          setPhase('doors-opening');
-        }, 400);
-      } else {
-        setPhotoIndex(count);
-      }
-    }, 700);
+
+    // Looping untuk memutar setiap foto dengan efek jeda
+    for (let i = 0; i < photos.length; i++) {
+      setPhotoIndex(i);
+      // Tunggu 1.8 detik per foto (1.2s untuk animasi flash + 0.6s untuk melihat foto)
+      await sleep(900); 
+    }
+
+    // Setelah foto habis, pindah ke fase pintu terbuka (di mana flash terakhir akan muncul)
+    setPhase('doors-opening');
   };
 
-  // Called when doors have fully opened
+  // Dipanggil saat pintu selesai terbuka sepenuhnya
   const handleDoorsComplete = () => {
     onOpen();
   };
@@ -39,7 +38,6 @@ const SplashScreen = ({ onOpen }) => {
   return (
     <motion.div 
       className="fixed inset-0 z-50 overflow-hidden flex items-center justify-center"
-      // Don't use exit here — we control everything via phases
     >
       {/* ─── DOORS ─── */}
       {/* Left Door */}
@@ -104,7 +102,7 @@ const SplashScreen = ({ onOpen }) => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="text-5xl md:text-7xl font-calligraphy text-primary mb-4 drop-shadow-sm"
+          className="text-6xl md:text-7xl font-calligraphy text-primary mb-4 drop-shadow-sm"
         >
           Dwi & Turkis
         </motion.h1>
@@ -123,7 +121,7 @@ const SplashScreen = ({ onOpen }) => {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="mb-8 font-sans text-lg md:text-xl text-dark"
         >
-          Dear Mr/Mrs/Ms,<br/><strong className="text-xl mt-2 block">Tamu Kehormatan</strong>
+          Kepada Yth:<br/><strong className="text-xl mt-2 block">{guestName}</strong>
         </motion.p>
 
         <motion.button 
@@ -139,52 +137,73 @@ const SplashScreen = ({ onOpen }) => {
         </motion.button>
       </motion.div>
 
-      {/* ─── CAMERA FLASH SEQUENCE ─── */}
+      {/* ─── CAMERA FLASH SEQUENCE (Animasi Looping Foto) ─── */}
       <AnimatePresence>
         {phase === 'flashing' && (
           <motion.div 
-            className="absolute inset-0 z-[60] flex items-center justify-center bg-dark"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            className="absolute inset-0 z-[60] flex items-center justify-center bg-black"
           >
-            <AnimatePresence mode="wait">
-              <motion.img 
-                key={`img-${photoIndex}`}
-                src={photos[photoIndex]} 
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={{ scale: 1.15, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-              />
-            </AnimatePresence>
-            {/* White Flash Effect */}
+            {/* Foto Baru yang Muncul (Tidak menggunakan AnimatePresence untuk cut yang lebih tegas) */}
+            <motion.img 
+              key={`img-${photoIndex}`}
+              src={photos[photoIndex]} 
+              className="absolute inset-0 w-full h-full object-cover"
+              initial={{ scale: 1.15 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, ease: 'easeOut' }}
+            />
+            
+            {/* Efek Jepretan Kamera (Hitam -> Putih -> Transparan) */}
             <motion.div 
               key={`flash-${photoIndex}`}
-              className="absolute inset-0 bg-white pointer-events-none"
-              initial={{ opacity: 0.9 }}
-              animate={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
+              className="absolute inset-0 pointer-events-none"
+              animate={{ 
+                backgroundColor: [
+                  "rgba(0,0,0,1)",       // 1. Shutter menutup (Gelap sesaat)
+                  "rgba(255,255,255,1)", // 2. Flash menyala (Putih terang)
+                  "rgba(255,255,255,0)"  // 3. Memudar perlahan
+                ] 
+              }}
+              transition={{ 
+                duration: 1.2, 
+                times: [0, 0.05, 1], // Durasi setiap frame
+                ease: 'easeOut' 
+              }}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* ─── LAST PHOTO CROSSFADE TO DOORS ─── */}
+      {/* ─── FINAL FLASH & CROSSFADE KE PINTU TERBUKA ─── */}
       <AnimatePresence>
         {phase === 'doors-opening' && (
           <motion.div
             className="absolute inset-0 z-[55] pointer-events-none"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: 'easeInOut' }}
           >
-            <img 
+            {/* Mempertahankan foto terakhir di belakang pintu lalu perlahan menghilang */}
+            <motion.img 
               src={photos[photos.length - 1]} 
               className="absolute inset-0 w-full h-full object-cover"
-              alt=""
+              initial={{ opacity: 1, scale: 1 }}
+              animate={{ opacity: 0, scale: 1.05 }}
+              transition={{ duration: 1.5, delay: 0.3, ease: "easeInOut" }}
+            />
+
+            {/* Flash Jepretan Terakhir sebelum pintu terungkap */}
+            <motion.div 
+              className="absolute inset-0 z-10"
+              animate={{
+                backgroundColor: [
+                  "rgba(0,0,0,1)",       // Shutter terakhir menutup
+                  "rgba(255,255,255,1)", // Flash bang!
+                  "rgba(255,255,255,0)"  // Pintu perlahan terlihat
+                ]
+              }}
+              transition={{
+                duration: 1.5,
+                times: [0, 0.1, 1],
+                ease: "easeOut"
+              }}
             />
           </motion.div>
         )}

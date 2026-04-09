@@ -73,7 +73,7 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="text-lg md:text-2xl font-sans tracking-wide mb-4"
         >
-          Minggu, 12 Desember 2027
+          Sabtu, 09 Mei 2026
         </motion.p>
 
         {/* Romantic verse */}

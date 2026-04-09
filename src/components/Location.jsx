@@ -6,7 +6,7 @@ const Location = () => {
   const venue = {
     name: 'Cultural Park Bengkulu',
     address: 'Kota Bengkulu, Bengkulu, Indonesia',
-    date: 'Minggu, 12 Desember 2027',
+    date: 'Sabtu, 09 Mei 2026',
     akadTime: '08:00 WIB - Selesai',
     resepsiTime: '11:00 WIB - Selesai',
     mapsLink: 'https://maps.app.goo.gl/4jWFDBFz4J6sJNF9A',
