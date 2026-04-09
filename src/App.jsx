@@ -9,6 +9,7 @@ import Countdown from './components/Countdown';
 import Profile from './components/Profile';
 import Gallery from './components/Gallery';
 import Location from './components/Location';
+import WeddingGift from './components/WeddingGift';
 import RSVP from './components/RSVP';
 import { FallingPetals } from './components/FloralDecorations';
 
@@ -58,6 +59,7 @@ function App() {
           <Profile />
           <Gallery />
           <Location />
+          <WeddingGift />
           <RSVP />
         </motion.main>
       </div>
