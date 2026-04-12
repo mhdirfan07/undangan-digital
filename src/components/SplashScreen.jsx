@@ -5,18 +5,21 @@ import { FloralCorner, FloralDivider, WatercolorBlob } from './FloralDecorations
 // Fungsi bantuan untuk memberi jeda waktu agar logika animasi lebih rapi
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const SplashScreen = ({ onOpen, guestName = 'Tamu Kehormatan' }) => {
+const SplashScreen = ({ onOpen, onStartOpening, guestName = 'Tamu Kehormatan' }) => {
   // Phases: 'initial' → 'flashing' → 'doors-opening'
   const [phase, setPhase] = useState('initial');
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const photos = [
-    "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"
+    "/images/IMG_1884.JPG.jpeg",
+    "/images/IMG_2069.JPG.jpeg",
+    "/images/IMG_1998.JPG.jpeg"
   ];
 
   const handleBuka = async () => {
+    if (onStartOpening) {
+      onStartOpening();
+    }
     setPhase('flashing');
 
     // Looping untuk memutar setiap foto dengan efek jeda

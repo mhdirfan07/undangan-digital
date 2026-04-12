@@ -18,7 +18,7 @@ const Profile = () => {
         <FloralCorner size={140} />
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -27,13 +27,13 @@ const Profile = () => {
       >
         <h2 className="text-4xl md:text-5xl font-calligraphy text-primary mb-4">Mempelai</h2>
         <p className="text-secondary font-medium tracking-widest uppercase mb-4 font-sans">Dua Insan Penuh Cinta</p>
-        
+
         <FloralDivider className="mb-16 opacity-80" />
-        
+
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
-          
+
           {/* Groom */}
-          <motion.div 
+          <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,10 +44,10 @@ const Profile = () => {
               {/* Decorative ring around photo */}
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-primary/20 animate-spin-slow" />
               <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-primary p-1 shadow-2xl relative z-10">
-                 <img 
-                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1288&auto=format&fit=crop" 
-                  alt="Dwi" 
-                  className="w-full h-full object-cover rounded-full"
+                <img
+                  src="/images/dwi.jpeg"
+                  alt="Dwi"
+                  className="w-full h-full object-cover rounded-full transition-transform duration-300 scale-125"
                 />
               </div>
               {/* Small floral accent */}
@@ -69,7 +69,7 @@ const Profile = () => {
           </motion.div>
 
           {/* Ring / Love connector */}
-          <motion.div 
+          <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -81,7 +81,7 @@ const Profile = () => {
           </motion.div>
 
           {/* Bride */}
-          <motion.div 
+          <motion.div
             className="flex flex-col items-center"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,10 +91,10 @@ const Profile = () => {
             <div className="relative mb-6">
               <div className="absolute -inset-3 rounded-full border-2 border-dashed border-accent/30 animate-spin-slow" style={{ animationDirection: 'reverse' }} />
               <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-primary p-1 shadow-2xl relative z-10">
-                  <img 
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop" 
-                  alt="Turkis" 
-                  className="w-full h-full object-cover rounded-full"
+                <img
+                  src="/images/turkis.jpeg"
+                  alt="Turkis"
+                  className="w-full h-full object-cover rounded-full transition-transform duration-300 scale-125"
                 />
               </div>
               {/* Small floral accent */}

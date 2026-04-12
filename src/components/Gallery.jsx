@@ -5,10 +5,10 @@ import { FloralDivider, FloralCorner, WatercolorBlob } from './FloralDecorations
 const Gallery = () => {
 
   const images = [
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop",
+    "/images/IMG_2203.JPG.jpeg",
+    "/images/IMG_2217.JPG.jpeg",
+    "/images/IMG_1880.JPG.jpeg",
+    "/images/IMG_2069.JPG.jpeg",
   ];
 
   return (
@@ -36,8 +36,6 @@ const Gallery = () => {
          <p className="text-secondary font-medium tracking-widest uppercase mb-4 font-sans">Moment Bahagia Kami</p>
 
          <FloralDivider className="mb-12 opacity-70" />
-
-         <p className="text-sm text-gray-500 mb-8 italic font-sans">Foto-foto ini diambil dan diintegrasikan langsung melalui Folder Google Drive.</p>
 
          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {images.map((src, index) => (

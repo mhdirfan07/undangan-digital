@@ -12,12 +12,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSy-GANTI-DENGAN-API-KEY-ANDA",
-  authDomain: "undangan-dwi-turkis.firebaseapp.com",
-  projectId: "undangan-dwi-turkis",
-  storageBucket: "undangan-dwi-turkis.appspot.com",
-  messagingSenderId: "000000000000",
-  appId: "1:000000000000:web:xxxxxxxxxxxxxxxxxxxx"
+  apiKey: "AIzaSyDJQZH5gWhM_0HiNqka0F3m8zXg_5rMii0",
+  authDomain: "rsvp-4914c.firebaseapp.com",
+  projectId: "rsvp-4914c",
+  storageBucket: "rsvp-4914c.firebasestorage.app",
+  messagingSenderId: "556986267566",
+  appId: "1:556986267566:web:2302921e2ab1f55d64fa3f",
+  measurementId: "G-DXZRXSMPNN"
 };
 
 const app = initializeApp(firebaseConfig);

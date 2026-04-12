@@ -25,8 +25,12 @@ function App() {
     return name ? decodeURIComponent(name) : 'Tamu Kehormatan';
   }, []);
 
-  const handleOpen = () => {
+  const handleStartOpening = () => {
+    // Lagu akan langsung diputar saat di-klik, sebelum animasi pintu selesai
     setIsPlaying(true);
+  };
+
+  const handleOpen = () => {
     setIsOpened(true);
 
     setTimeout(() => {
@@ -42,9 +46,14 @@ function App() {
   return (
     <ParallaxProvider>
       <div className="font-sans text-dark bg-light min-h-screen">
-        {showSplash && <SplashScreen onOpen={handleOpen} guestName={guestName} />}
+        {showSplash && <SplashScreen onOpen={handleOpen} onStartOpening={handleStartOpening} guestName={guestName} />}
 
-        {isOpened && <AudioPlayer isPlaying={isPlaying} togglePlay={() => setIsPlaying(!isPlaying)} />}
+        {/* AudioPlayer dirender sejak awal untuk menangkap klik user langsung */}
+        <AudioPlayer 
+          isPlaying={isPlaying} 
+          togglePlay={() => setIsPlaying(!isPlaying)} 
+          showButton={isOpened} 
+        />
 
         {isOpened && <FallingPetals count={15} />}
 

@@ -8,25 +8,18 @@ const WeddingGift = () => {
   const accounts = [
     {
       bank: 'Mandiri',
-      number: '1234567890123',
-      name: 'Dwi',
+      number: '1550011746677',
+      name: 'TURKIS',
       logo: 'public/images/mandiri_logo.png',
       logoSize: 'w-24'
     },
     {
       bank: 'BCA',
-      number: '0987654321',
-      name: 'Turkis',
+      number: '0581643518',
+      name: 'dwi yolanda sari',
       logo: 'public/images/bca_logo.png',
       logoSize: 'w-24'
     },
-    {
-      bank: 'DANA',
-      number: '081234567890',
-      name: 'Dwi & Turkis',
-      logo: 'public/images/Dana_logo.png',
-      logoSize: 'w-24'
-    }
   ];
 
   const handleCopy = (number) => {
