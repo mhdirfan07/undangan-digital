@@ -104,7 +104,7 @@ const RSVP = () => {
         transition={{ duration: 0.8 }}
         className="max-w-3xl mx-auto relative z-10 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-calligraphy text-primary mb-4">Wishes</h2>
+        <h2 className="text-4xl md:text-5xl font-calligraphy text-white mb-4">Wishes</h2>
         <p className="text-white/80 font-medium tracking-widest uppercase mb-4 font-sans">Ucapan Selamat & Do'a</p>
 
         <FloralDivider className="mb-12 opacity-50" />

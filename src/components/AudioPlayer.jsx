@@ -7,7 +7,7 @@ const AudioPlayer = ({ isPlaying, togglePlay, showButton = true }) => {
 
   // --- KONFIGURASI AUDIO ---
   const VOLUME = 0.6; // Rentang 0.0 hingga 1.0 (0.5 = 50% suara)
-  const START_TIME = 45; // Lagu akan mulai dari detik ke-23
+  const START_TIME = 22; // Lagu akan mulai dari detik ke-23
   // -------------------------
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const AudioPlayer = ({ isPlaying, togglePlay, showButton = true }) => {
     <>
       <audio 
         ref={audioRef} 
-        src="/music/Mariah Carey - Thank God I Found You.mp3" 
+        src="/music/Risk It All - Bruno Mars (Saxophone Cover by Dori Wirawan).mp3" 
         loop
         preload="auto"
       />

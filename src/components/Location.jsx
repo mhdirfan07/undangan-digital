@@ -100,7 +100,7 @@ const Location = () => {
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3 className="text-2xl font-calligraphy text-accent mb-2">Resepsi</h3>
+            <h3 className="text-2xl font-calligraphy text-primary mb-2">Resepsi</h3>
             <p className="text-dark font-sans font-semibold mb-1">{venue.date}</p>
             <p className="text-dark/70 font-sans text-sm">{venue.resepsiTime}</p>
             

@@ -77,7 +77,7 @@ const Profile = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <RingIcon className="mb-2" />
-            <span className="text-4xl font-calligraphy text-primary/40">&</span>
+            <span className="text-6xl font-calligraphy text-primary/40">&</span>
           </motion.div>
 
           {/* Bride */}

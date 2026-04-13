@@ -6,7 +6,7 @@ const LoveStory = () => {
   const storyItems = [
     {
       title: "Awal Pertemuan",
-      content: "Takdir mempertemukan kami di tanah rantau, ribuan kilometer dari rumah. Namun siapa sangka, di tengah asingnya kota orang, kami justru menemukan kehangatan kampung halaman dalam diri satu sama lain. Berawal dari kesamaan asal, kami tumbuh dalam pertemanan yang bermuara pada satu janji: Komitmen.",
+      content: "Takdir mempertemukan kami di tanah rantau, ribuan kilometer dari rumah. Namun siapa sangka, di tengah asingnya kota orang, kami justru menemukan kehangatan kampung halaman dalam diri satu sama lain. Berawal dari kesamaan asal, kami tumbuh dalam pertemanan yang bermuara pada satu janji yaitu Komitmen.",
       date: "Perkenalan"
     },
     {

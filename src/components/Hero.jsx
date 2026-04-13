@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       <Parallax speed={-20} className="absolute inset-0">
-        <div className="w-full h-[120vh] bg-[url('/images/IMG_2203.JPG.jpeg')] bg-cover bg-center brightness-50" />
+        <div className="w-full h-[120vh] bg-[url('/images/IMG_2203.JPG.jpeg')] bg-cover bg-center" />
       </Parallax>
       
       {/* Floral corners overlay */}
@@ -24,7 +24,7 @@ const Hero = () => {
         <FloralCorner size={160} />
       </div>
 
-      <div className="relative z-10 text-center text-white p-8 md:p-12 max-w-3xl glass-dark rounded-3xl">
+      <div className="relative z-10 text-center text-dark p-8 md:p-12 max-w-3xl bg-dark/15 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl">
         {/* Bismillah */}
         <BismillahDecor className="mb-6" />
 
@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-sm tracking-widest text-primary mb-4 uppercase font-sans font-medium"
+          className="text-sm tracking-widest text-dark mb-4 uppercase font-sans font-medium"
         >
           We Are Getting Married
         </motion.p>
@@ -51,7 +51,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-6xl md:text-8xl font-calligraphy text-white mb-4 drop-shadow-lg"
+          className="text-6xl md:text-8xl font-calligraphy text-dark mb-4 drop-shadow-lg"
         >
           Dwi & Turkis
         </motion.h1>
@@ -71,7 +71,7 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-lg md:text-2xl font-sans tracking-wide mb-4"
+          className="text-lg md:text-2xl text-dark font-sans tracking-wide mb-4"
         >
           Sabtu, 09 Mei 2026
         </motion.p>
@@ -82,10 +82,10 @@ const Hero = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8 }}
-          className="text-sm md:text-base font-sans italic text-white/60 leading-relaxed"
+          className="text-sm md:text-base font-sans italic text-dark leading-relaxed"
         >
           "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup<br className="hidden md:block" /> dari jenismu sendiri, supaya kamu merasa tenteram."
-          <span className="block mt-1 text-xs text-primary/70 not-italic">— QS. Ar-Rum: 21</span>
+          <span className="block mt-1 text-xs text-dark not-italic">— QS. Ar-Rum: 21</span>
         </motion.p>
       </div>
       

@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#FF9A9E',    // Soft Pink/Coral
-        'secondary': '#A8E6CF',  // Soft Mint
-        'accent': '#FAD0C4',     // Rose Gold
-        'dark': '#2D3436',       // Charcoal
-        'light': '#FFFDF9',      // Cream
+        'primary': '#296374',    // Muted Teal
+        'secondary': '#629FAD',  // Soft Blue
+        'accent': '#629FAD',     // Soft Blue Accent
+        'dark': '#0C2C55',       // Deep Navy
+        'light': '#F0F7F9',      // Very Light Blue Tint (for readability)
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
