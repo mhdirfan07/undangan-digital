@@ -4,11 +4,11 @@ import { FloralDivider, FloralCorner, WatercolorBlob } from './FloralDecorations
 
 const Location = () => {
   const venue = {
-    name: 'Cultural Park Bengkulu',
+    name: 'Taman Budaya',
     address: 'Kota Bengkulu, Bengkulu, Indonesia',
     date: 'Sabtu, 09 Mei 2026',
     akadTime: '08:00 WIB - Selesai',
-    resepsiTime: '11:00 WIB - Selesai',
+    resepsiTime: '10:00 WIB - Selesai',
     mapsLink: 'https://maps.app.goo.gl/4jWFDBFz4J6sJNF9A',
     lat: -3.8161785,
     lng: 102.2881776,

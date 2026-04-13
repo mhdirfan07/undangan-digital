@@ -7,6 +7,7 @@ import AudioPlayer from './components/AudioPlayer';
 import Hero from './components/Hero';
 import Countdown from './components/Countdown';
 import Profile from './components/Profile';
+import LoveStory from './components/LoveStory';
 import Gallery from './components/Gallery';
 import Location from './components/Location';
 import WeddingGift from './components/WeddingGift';
@@ -66,6 +67,7 @@ function App() {
           <Hero />
           <Countdown />
           <Profile />
+          <LoveStory />
           <Gallery />
           <Location />
           <WeddingGift />
