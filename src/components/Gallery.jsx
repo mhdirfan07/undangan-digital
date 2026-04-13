@@ -5,10 +5,12 @@ import { FloralDivider, FloralCorner, WatercolorBlob } from './FloralDecorations
 const Gallery = () => {
 
   const images = [
+    "/images/IMG_2069.JPG.jpeg",
+    "/images/IMG_1884.JPG.jpeg",
+    "/images/IMG_1998.JPG.jpeg",
+    "/images/IMG_1880.JPG.jpeg",
     "/images/IMG_2203.JPG.jpeg",
     "/images/IMG_2217.JPG.jpeg",
-    "/images/IMG_1880.JPG.jpeg",
-    "/images/IMG_2069.JPG.jpeg",
   ];
 
   return (

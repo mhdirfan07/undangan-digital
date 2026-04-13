@@ -10,14 +10,14 @@ const WeddingGift = () => {
       bank: 'Mandiri',
       number: '1550011746677',
       name: 'TURKIS',
-      logo: 'public/images/mandiri_logo.png',
+      logo: '/images/mandiri_logo.png',
       logoSize: 'w-24'
     },
     {
       bank: 'BCA',
       number: '0581643518',
       name: 'dwi yolanda sari',
-      logo: 'public/images/bca_logo.png',
+      logo: '/images/bca_logo.png',
       logoSize: 'w-24'
     },
   ];

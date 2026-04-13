@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       <Parallax speed={-20} className="absolute inset-0">
-        <div className="w-full h-[120vh] bg-[url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center brightness-50" />
+        <div className="w-full h-[120vh] bg-[url('/images/IMG_2203.JPG.jpeg')] bg-cover bg-center brightness-50" />
       </Parallax>
       
       {/* Floral corners overlay */}

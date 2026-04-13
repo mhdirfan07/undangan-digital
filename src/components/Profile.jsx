@@ -63,9 +63,9 @@ const Profile = () => {
                 </svg>
               </div>
             </div>
-            <h3 className="text-3xl font-calligraphy text-primary mb-2">Dwi</h3>
+            <h3 className="text-3xl font-calligraphy text-primary mb-2">Dwi Yolanda Sari</h3>
             <p className="text-dark/70 mb-1 font-sans text-sm">Anak Kedua dari</p>
-            <p className="font-semibold text-dark font-sans text-sm">Bpk. M.Nur,S.Sos.,M.M  & Ibu Widia Nengsih, S.Sos </p>
+            <p className="font-semibold text-dark font-sans text-sm">Bpk. M.Nur & Ibu Widia Nengsih </p>
           </motion.div>
 
           {/* Ring / Love connector */}
@@ -112,7 +112,7 @@ const Profile = () => {
             </div>
             <h3 className="text-3xl font-calligraphy text-primary mb-2">Turkis </h3>
             <p className="text-dark/70 mb-1 font-sans text-sm">Anak keenam dari</p>
-            <p className="font-semibold text-dark font-sans text-sm">Bpk. Daud (Alm)  & Ibu  </p>
+            <p className="font-semibold text-dark font-sans text-sm">Bpk. Daud (Alm) & Ibu Darmawati </p>
           </motion.div>
 
         </div>
