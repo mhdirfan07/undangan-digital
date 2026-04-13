@@ -59,7 +59,7 @@ const WeddingGift = () => {
         </p>
 
         {/* Account Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {accounts.map((acc, i) => (
             <motion.div
               key={acc.bank}
